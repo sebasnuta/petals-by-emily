@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sebasnuta.github.io/petals-by-emily/sitemap.xml
