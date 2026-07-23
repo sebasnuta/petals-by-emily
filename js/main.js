@@ -62,8 +62,20 @@
   function initBanner() {
     var banner = document.querySelector(".season-banner");
     if (!banner) return;
+    var root = document.documentElement;
+    // The banner is pinned above the fixed header; publish its real height so
+    // the header and hero know how far to sit below it (handles text wrapping).
+    function syncHeight() {
+      var h = banner.classList.contains("hidden") ? 0 : banner.offsetHeight;
+      root.style.setProperty("--banner-h", h + "px");
+    }
+    syncHeight();
+    window.addEventListener("resize", syncHeight, { passive: true });
     var closeBtn = banner.querySelector(".banner-close");
-    if (closeBtn) closeBtn.addEventListener("click", function () { banner.classList.add("hidden"); });
+    if (closeBtn) closeBtn.addEventListener("click", function () {
+      banner.classList.add("hidden");
+      syncHeight();
+    });
   }
 
   /* ---------- 4. HERO SLIDESHOW ---------- */
