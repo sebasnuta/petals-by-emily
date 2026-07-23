@@ -68,6 +68,7 @@
   --wrap:        1120px;
   --wrap-narrow: 760px;
   --nav-h:       72px;
+  --banner-h:    0px;    /* set by JS to the seasonal banner's height; 0 when no banner */
 
   /* Effects */
   --shadow:    0 8px 30px rgba(150, 60, 90, 0.10);
@@ -207,7 +208,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
    ============================================================ */
 .site-header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: var(--banner-h); left: 0; right: 0;
   height: var(--nav-h);
   background: rgba(253, 233, 235, 0.92);
   backdrop-filter: blur(10px);
@@ -312,7 +313,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
   position: relative;
   height: 88vh;
   min-height: 520px;
-  margin-top: var(--nav-h);
+  margin-top: calc(var(--nav-h) + var(--banner-h));
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -378,7 +379,9 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
   text-align: center;
   font-size: 0.95rem;
   padding: 10px var(--gap-lg) 10px var(--gap-sm);
-  position: relative;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
 }
 .season-banner a { color: var(--white); text-decoration: underline; font-weight: 500; }
 .season-banner .banner-close {
