@@ -689,6 +689,13 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 }
 .cal-row .month { font-family: var(--font-script); font-size: 1.4rem; color: var(--rose); }
 .cal-row .events { font-size: 0.95rem; color: var(--ink); }
+/* Current month highlight — move the .is-current class in deals.html
+   to whichever month is live. Purely decorative. */
+.cal-row.is-current {
+  background: var(--surface-alt);
+  box-shadow: inset 0 0 0 1.5px var(--rose);
+}
+.cal-row.is-current .events { font-weight: 500; }
 
 /* ============================================================
    19. BLOG

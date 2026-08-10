@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seasonal Deals | Petals By Emily &mdash; Easley &amp; Greenville, SC</title>
-  <meta name="description" content="Upcoming seasonal bouquet events and pre-order deadlines from Petals By Emily. Girlfriend's Day, Valentine's, holidays and more in the Greenville area.">
+  <meta name="description" content="Upcoming seasonal bouquet events and pre-order deadlines from Petals By Emily. Fall bouquets, Halloween, Thanksgiving, Christmas and more in the Greenville area.">
   <link rel="canonical" href="https://sebasnuta.github.io/petals-by-emily/deals.html">
   <meta property="og:title" content="Seasonal Deals | Petals By Emily &mdash; Easley &amp; Greenville, SC">
-  <meta property="og:description" content="Upcoming seasonal bouquet events and pre-order deadlines from Petals By Emily. Girlfriend's Day, Valentine's, holidays and more in the Greenville area.">
+  <meta property="og:description" content="Upcoming seasonal bouquet events and pre-order deadlines from Petals By Emily. Fall bouquets, Halloween, Thanksgiving, Christmas and more in the Greenville area.">
   <meta property="og:image" content="https://sebasnuta.github.io/petals-by-emily/assets/img/og-card.png">
   <meta property="og:url" content="https://sebasnuta.github.io/petals-by-emily/deals.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -60,22 +60,19 @@
         </div>
 
         <!-- FEATURED CURRENT EVENT
-             ⚠ MAINTENANCE: update the event name, date, and data-deadline
-             each season. If data-deadline passes, the countdown shows a
-             "pre-orders closed" message automatically. -->
+             ⚠ MAINTENANCE: update the event name, date, and copy each season.
+             This block is currently in ROLLING mode (no single date, so no
+             countdown). To switch back to a countdown event, restore the
+             .countdown-caption + .countdown markup shown in the comment at the
+             bottom of this file and set data-deadline="YYYY-MM-DD". -->
         <div class="event-feature reveal mt-lg">
           <p class="section-label" style="margin:0">next up</p>
-          <p class="event-name">National Girlfriend&rsquo;s &amp; Wife&rsquo;s Day</p>
-          <p class="event-date">August 1st</p>
-          <p>Treat someone you love to a custom bouquet. Pre-order early to guarantee yours.</p>
-          <p class="countdown-caption">Pre-order closes in</p>
-          <div class="countdown" data-deadline="2026-07-29" role="timer" aria-live="polite">
-            <div class="cd-unit"><span class="cd-num" data-cd="months">--</span><span class="cd-label">Months</span></div>
-            <div class="cd-unit"><span class="cd-num" data-cd="days">--</span><span class="cd-label">Days</span></div>
-            <div class="cd-unit"><span class="cd-num" data-cd="hours">--</span><span class="cd-label">Hours</span></div>
-            <div class="cd-unit"><span class="cd-num" data-cd="mins">--</span><span class="cd-label">Minutes</span></div>
-          </div>
-          <a href="order.html" class="btn btn-bloom mt-sm">Pre-order now</a>
+          <p class="event-name">Fall Bouquets</p>
+          <p class="event-date">All September</p>
+          <p>Warm autumn tones are here. Deep reds, burnt orange, and dried accents, made to order in natural or eternal.</p>
+          <p class="countdown-caption">Ordering now for September</p>
+          <p class="muted">No deadline on these, they run all month. A few days&rsquo; notice helps us save your spot for a specific date.</p>
+          <a href="order.html" class="btn btn-bloom mt-sm">Order yours</a>
         </div>
 
         <!-- FULL SEASONAL CALENDAR -->
@@ -83,8 +80,11 @@
           <h2>The Year in Bloom</h2>
         </div>
         <div class="calendar mt-lg reveal">
+          <!-- Aug 1 — National Girlfriend&rsquo;s &amp; Wife&rsquo;s Day: hidden 2026-08-09 (date passed).
+               Re-add next year:
           <div class="cal-row"><span class="month">August</span><span class="events">Aug 1 &mdash; National Girlfriend&rsquo;s &amp; Wife&rsquo;s Day</span></div>
-          <div class="cal-row"><span class="month">September</span><span class="events">Fall bouquets all month</span></div>
+          -->
+          <div class="cal-row is-current"><span class="month">September</span><span class="events">Fall bouquets all month</span></div>
           <div class="cal-row"><span class="month">October</span><span class="events">Oct 3 &mdash; National Boyfriend&rsquo;s Day &middot; Oct 31 &mdash; Halloween &middot; Fall bouquets all month</span></div>
           <div class="cal-row"><span class="month">November</span><span class="events">Nov 26 &mdash; Thanksgiving</span></div>
           <div class="cal-row"><span class="month">December</span><span class="events">Christmas bouquets all December &middot; Dec 25 &mdash; Christmas</span></div>
@@ -121,7 +121,7 @@
         <div class="footer-col">
           <h4>Visit</h4>
           <p class="muted">Easley, SC 29640<br>Serving the Greenville area</p>
-          <p class="footer-season mt-sm">🌸 Next up: Girlfriend&rsquo;s Day, Aug 1 &mdash; pre-order by Jul 29</p>
+          <p class="footer-season mt-sm">🌸 Next up: Fall bouquets, all September</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -133,5 +133,20 @@
   <div class="mobile-cta"><a href="order.html" class="btn">Order Now</a></div>
   <button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
   <script src="js/main.js"></script>
+<!-- ============================================================
+     COUNTDOWN SNIPPET (paste back into .event-feature when the next
+     dated event is set, and delete the rolling <p class="muted"> line):
+
+       <p class="countdown-caption">Pre-order closes in</p>
+       <div class="countdown" data-deadline="YYYY-MM-DD" role="timer" aria-live="polite">
+         <div class="cd-unit"><span class="cd-num" data-cd="months">--</span><span class="cd-label">Months</span></div>
+         <div class="cd-unit"><span class="cd-num" data-cd="days">--</span><span class="cd-label">Days</span></div>
+         <div class="cd-unit"><span class="cd-num" data-cd="hours">--</span><span class="cd-label">Hours</span></div>
+         <div class="cd-unit"><span class="cd-num" data-cd="mins">--</span><span class="cd-label">Minutes</span></div>
+       </div>
+
+     Once data-deadline passes, the countdown auto-swaps to
+     "Pre-orders for this event are now closed — DM us to check availability."
+     ============================================================ -->
 </body>
 </html>
